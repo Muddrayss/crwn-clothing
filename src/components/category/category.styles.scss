@@ -1,0 +1,18 @@
+.category-container {
+  display: flex;
+  flex-direction: column;
+
+  .category-title {
+    font-size: 28px;
+    margin-block: 25px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+    row-gap: 50px;
+  }
+}
