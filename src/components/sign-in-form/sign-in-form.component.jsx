@@ -44,7 +44,7 @@ const SignInForm = () => {
           alert('Incorrect email!');
           break;
         default:
-          console.log(error);
+          console.log('An error occured while signin in: ', error);
       }
     }
   };
@@ -59,7 +59,7 @@ const SignInForm = () => {
     <div className='sign-in-container'>
       <h2>Already have an account?</h2>
       <span>Sign in with your email and password</span>
-      <form onSubmit={() => handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <FormInput
           label='Email'
           type='text'
@@ -76,13 +76,13 @@ const SignInForm = () => {
           required
           onChange={handleChange}
         />
+        <div className='sign-in-buttons'>
+          <Button type='submit'>Sign in</Button>
+          <Button type='button' buttonType='google' onClick={signInWithGoogle}>
+            Google Sign in
+          </Button>
+        </div>
       </form>
-      <div className='sign-in-buttons'>
-        <Button type='submit'>Sign in</Button>
-        <Button type='button' buttonType='google' onClick={signInWithGoogle}>
-          Google Sign in
-        </Button>
-      </div>
     </div>
   );
 };
