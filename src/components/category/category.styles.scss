@@ -1,13 +1,13 @@
+.category-title {
+  font-size: 28px;
+  margin-block: 25px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
 .category-container {
   display: flex;
   flex-direction: column;
-
-  .category-title {
-    font-size: 28px;
-    margin-block: 25px;
-    text-transform: uppercase;
-    text-align: center;
-  }
 
   .products {
     display: grid;
