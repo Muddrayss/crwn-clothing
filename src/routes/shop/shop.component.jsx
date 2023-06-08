@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux';
 import CategoriesPreview from '../categories-preview/categories-preview.component';
 import Category from '../../components/category/category.component';
 
-import { fetchCategoriesAsync } from '../../store/categories/categories.action';
+import { fetchCategoriesStart } from '../../store/categories/categories.action';
 
 import './shop.styles.scss';
 
@@ -13,7 +13,7 @@ const Shop = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchCategoriesAsync());
+    dispatch(fetchCategoriesStart());
   }, [dispatch]);
 
   return (
